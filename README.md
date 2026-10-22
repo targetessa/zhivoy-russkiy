@@ -37,4 +37,4 @@ $zhivoy-russkiy
 - [Источники](references/sources.md).
 - [Проверки пакета](evals/validation.md).
 
-Версия 1.3.0 · [MIT](LICENSE). Все примеры написаны для скилла.
+Версия 1.4.0 · [MIT](LICENSE). Все примеры написаны для скилла.
