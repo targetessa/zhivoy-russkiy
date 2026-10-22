@@ -1,0 +1,121 @@
+{
+  "scene": "bridge-inspection",
+  "entry": "v1",
+  "lines": [
+    {
+      "id": "v1",
+      "speaker": "vera",
+      "text": "Я должна сказать, что состояние этого троса является плохим.",
+      "next": "l1",
+      "max_chars": 160
+    },
+    {
+      "id": "l1",
+      "speaker": "lida",
+      "text": "Я вижу это. Ты думаешь, что он сможет выдержать?",
+      "next": "v2",
+      "max_chars": 160
+    },
+    {
+      "id": "v2",
+      "speaker": "vera",
+      "text": "Я не имею уверенности относительно этого.",
+      "next": "o1",
+      "max_chars": 160
+    },
+    {
+      "id": "o1",
+      "speaker": "orlov",
+      "text": "Это Орлов. Мне необходимо иметь информацию о результате осмотра к 18:00.",
+      "next": "v3",
+      "max_chars": 160
+    },
+    {
+      "id": "v3",
+      "speaker": "vera",
+      "text": "Мы осуществим осмотр. До этого момента я не разрешаю проход по мосту.",
+      "next": "l2",
+      "max_chars": 160
+    },
+    {
+      "id": "l2",
+      "speaker": "lida",
+      "text": "Я могу сделать поход на склад и принести ключ, если это поможет.",
+      "next": "v4",
+      "max_chars": 160
+    },
+    {
+      "id": "v4",
+      "speaker": "vera",
+      "text": "Да. Это то, что нам требуется.",
+      "next": "choose",
+      "max_chars": 160
+    },
+    {
+      "id": "choose",
+      "speaker": "ui",
+      "text": "{player}, выберите желаемую опцию.",
+      "next": null,
+      "max_chars": 160,
+      "options": [
+        {
+          "label_id": "choice_yes",
+          "next": "accept"
+        },
+        {
+          "label_id": "choice_no",
+          "next": "decline"
+        }
+      ]
+    },
+    {
+      "id": "accept",
+      "speaker": "lida",
+      "text": "Я буду осуществлять ожидание у склада.",
+      "next": "merge",
+      "max_chars": 160
+    },
+    {
+      "id": "decline",
+      "speaker": "vera",
+      "text": "В таком случае нам придётся осуществлять осмотр без ключа.",
+      "next": "merge",
+      "max_chars": 160
+    },
+    {
+      "id": "merge",
+      "speaker": "orlov",
+      "text": "Необходимо удостовериться в безопасности моста до открытия движения.",
+      "next": "hint",
+      "max_chars": 160
+    },
+    {
+      "id": "hint",
+      "speaker": "tutorial",
+      "text": "<b>Осмотр</b>\nДождитесь завершения осмотра перед тем, как осуществлять переход по мосту.",
+      "next": "counter",
+      "max_chars": 160
+    },
+    {
+      "id": "counter",
+      "speaker": "ui",
+      "text": "Количество осмотренных опор: {count}",
+      "next": null,
+      "max_chars": 160
+    },
+    {
+      "id": "choice_yes",
+      "speaker": "ui",
+      "text": "Согласиться осуществить доставку ключа",
+      "next": null,
+      "max_chars": 50
+    },
+    {
+      "id": "choice_no",
+      "speaker": "ui",
+      "text": "Отказаться от осуществления доставки ключа",
+      "next": null,
+      "max_chars": 50
+    }
+  ]
+}

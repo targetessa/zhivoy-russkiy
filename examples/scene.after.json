@@ -1,0 +1,121 @@
+{
+  "scene": "bridge-inspection",
+  "entry": "v1",
+  "lines": [
+    {
+      "id": "v1",
+      "speaker": "vera",
+      "text": "Трос повреждён.",
+      "next": "l1",
+      "max_chars": 160
+    },
+    {
+      "id": "l1",
+      "speaker": "lida",
+      "text": "Вижу. Как думаешь, он выдержит?",
+      "next": "v2",
+      "max_chars": 160
+    },
+    {
+      "id": "v2",
+      "speaker": "vera",
+      "text": "Не знаю.",
+      "next": "o1",
+      "max_chars": 160
+    },
+    {
+      "id": "o1",
+      "speaker": "orlov",
+      "text": "Орлов на связи. Сообщите результат осмотра к 18:00.",
+      "next": "v3",
+      "max_chars": 160
+    },
+    {
+      "id": "v3",
+      "speaker": "vera",
+      "text": "Осмотрим. До тех пор я никого на мост не пущу.",
+      "next": "l2",
+      "max_chars": 160
+    },
+    {
+      "id": "l2",
+      "speaker": "lida",
+      "text": "Я могу сходить на склад за ключом, если это поможет.",
+      "next": "v4",
+      "max_chars": 160
+    },
+    {
+      "id": "v4",
+      "speaker": "vera",
+      "text": "Да, ключ нам нужен.",
+      "next": "choose",
+      "max_chars": 160
+    },
+    {
+      "id": "choose",
+      "speaker": "ui",
+      "text": "{player}, выберите действие.",
+      "next": null,
+      "max_chars": 160,
+      "options": [
+        {
+          "label_id": "choice_yes",
+          "next": "accept"
+        },
+        {
+          "label_id": "choice_no",
+          "next": "decline"
+        }
+      ]
+    },
+    {
+      "id": "accept",
+      "speaker": "lida",
+      "text": "Буду ждать у склада.",
+      "next": "merge",
+      "max_chars": 160
+    },
+    {
+      "id": "decline",
+      "speaker": "vera",
+      "text": "Тогда придётся осматривать без ключа.",
+      "next": "merge",
+      "max_chars": 160
+    },
+    {
+      "id": "merge",
+      "speaker": "orlov",
+      "text": "Не открывайте движение, пока не убедитесь, что мост безопасен.",
+      "next": "hint",
+      "max_chars": 160
+    },
+    {
+      "id": "hint",
+      "speaker": "tutorial",
+      "text": "<b>Осмотр</b>\nДождитесь конца осмотра, прежде чем идти по мосту.",
+      "next": "counter",
+      "max_chars": 160
+    },
+    {
+      "id": "counter",
+      "speaker": "ui",
+      "text": "Осмотрено опор: {count}",
+      "next": null,
+      "max_chars": 160
+    },
+    {
+      "id": "choice_yes",
+      "speaker": "ui",
+      "text": "Принести ключ",
+      "next": null,
+      "max_chars": 50
+    },
+    {
+      "id": "choice_no",
+      "speaker": "ui",
+      "text": "Не приносить ключ",
+      "next": null,
+      "max_chars": 50
+    }
+  ]
+}
