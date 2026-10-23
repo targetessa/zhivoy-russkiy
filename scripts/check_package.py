@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 import re
 import sys
-from build_prompt import compile_prompt, profiles
+from build_prompt import OPERATIONS, compile_prompt, profiles
 from quality import InputError, compare, read_json
 from video import compare as compare_video
 ROOT = Path(__file__).resolve().parents[1]
@@ -26,6 +26,7 @@ def check():
     for profile in profiles():
         compile_prompt(profile)
         compile_prompt(profile, 'voice')
+        compile_prompt(profile, extended=True)
     fragments = read_json(ROOT / 'evals/fragments.json')['cases']
     ids = [case['id'] for case in fragments]
     if len(ids) < 30 or len(ids) != len(set(ids)):
@@ -39,10 +40,17 @@ def check():
     regressions = read_json(ROOT / 'evals/cases.json')['cases']
     if len({case['id'] for case in regressions}) != len(regressions):
         errors.append('Duplicate regression IDs')
+    extended = read_json(ROOT / 'evals/extended.json')['cases']
+    if len({case['id'] for case in extended}) != len(extended):
+        errors.append('Duplicate extended-case IDs')
+    for case in extended:
+        if (case.get('profile') not in profiles() or case.get('operation') not in OPERATIONS
+                or not all(case.get(key) for key in ['request', 'source', 'semantic_invariants'])):
+            errors.append(f"Invalid extended case: {case.get('id')}")
     errors += compare(read_json(ROOT/'examples/scene.before.json'),read_json(ROOT/'examples/scene.after.json'))
     errors += compare_video(read_json(ROOT/'examples/video.before.json'),read_json(ROOT/'examples/video.after.json'))
     return {'ok': not errors, 'profiles':len(profiles()),'fragments':len(fragments),
-            'regression_cases':len(regressions),'errors':errors}
+            'regression_cases':len(regressions),'extended_cases':len(extended),'errors':errors}
 
 
 if __name__ == '__main__':

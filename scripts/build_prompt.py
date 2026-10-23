@@ -21,7 +21,7 @@ def profiles():
     return json.loads((ROOT / "profiles.json").read_text(encoding="utf-8"))["profiles"]
 
 
-def compile_prompt(profile, operation="edit"):
+def compile_prompt(profile, operation="edit", extended=False):
     routes = profiles()
     if profile not in routes or operation not in OPERATIONS:
         raise ValueError("Неизвестный профиль или действие")
@@ -31,6 +31,8 @@ def compile_prompt(profile, operation="edit"):
     documents = ["SKILL.md"] + ["references/" + name for name in routes[profile]]
     if operation == "voice" and "references/voice.md" not in documents:
         documents.append("references/voice.md")
+    if extended:
+        documents.append("references/syntax-and-composition.md")
     parts = [core]
     for name in documents[1:]:
         source = (ROOT / name).resolve()
@@ -52,9 +54,10 @@ def main(argv=None):
     parser.add_argument("--operation", choices=OPERATIONS, default="edit")
     parser.add_argument("--output", type=Path)
     parser.add_argument("--stats", action="store_true", help="Only counts and selected files; no token estimate")
+    parser.add_argument("--extended", action="store_true", help="Include sentence and paragraph composition for extended work")
     args = parser.parse_args(argv)
     try:
-        prompt, documents = compile_prompt(args.profile, args.operation)
+        prompt, documents = compile_prompt(args.profile, args.operation, args.extended)
         if args.stats:
             print(json.dumps({"profile": args.profile, "documents": documents,
                               "characters": len(prompt), "utf8_bytes": len(prompt.encode("utf-8"))}, ensure_ascii=False))

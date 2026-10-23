@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-23",
+  "version": "2.1.0",
+  "codex": {
+    "runtime": "codex-cli 0.163.0-alpha.11.2",
+    "test": "project-local .agents/skills/zhivoy-russkiy + explicit invocation in new read-only CLI session",
+    "result": "passed",
+    "observed_reads": [
+      ".agents/skills/zhivoy-russkiy/SKILL.md",
+      ".agents/skills/zhivoy-russkiy/references/explanation.md"
+    ],
+    "response": "В этом редакторе нельзя вернуться к сохранённой версии. Перед внесением изменений необходимо создать резервную копию файла.",
+    "files_changed": false
+  },
+  "claude_code": {
+    "runtime": "2.1.281",
+    "test": "project-local .claude/skills/zhivoy-russkiy in print mode with read-only tools",
+    "result": "blocked-authentication",
+    "message": "Not logged in; /login required",
+    "compatibility_claim": "Filesystem format and documented path verified; actual activation not confirmed"
+  },
+  "limits": [
+    "Explicit Codex invocation checked; implicit trigger coverage not claimed.",
+    "No real game, audio or production service was used."
+  ]
+}

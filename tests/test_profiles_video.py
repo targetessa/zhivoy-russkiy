@@ -102,4 +102,11 @@ class ProfileAndVideoTests(unittest.TestCase):
         self.assertIn('references/voice.md',sources)
         self.assertIn('Наблюдаемая карточка',text)
 
+    def test_extended_guidance_is_opt_in_for_export(self):
+        simple, simple_sources = build_prompt.compile_prompt('literary-prose')
+        expanded, expanded_sources = build_prompt.compile_prompt('literary-prose', extended=True)
+        self.assertNotIn('references/syntax-and-composition.md', simple_sources)
+        self.assertIn('references/syntax-and-composition.md', expanded_sources)
+        self.assertGreater(len(expanded), len(simple))
+
 if __name__ == '__main__': unittest.main()
