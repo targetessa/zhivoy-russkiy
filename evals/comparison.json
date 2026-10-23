@@ -1,0 +1,1768 @@
+{
+  "date": "2026-10-23",
+  "baseline_version": "1.4.0",
+  "baseline_commit": "2fdb8ac38794749e5cc0d72ecaff959a723f1b46",
+  "candidate": "working v2 before scoped-claim correction; not the final release",
+  "method": "One generation pass per arm in separate research-agent contexts; anonymous per-case ordering for a fresh reviewer. Not a statistical experiment.",
+  "model": "Exact model identifier and sampling parameters not available; not invented.",
+  "limits": [
+    "Generators had prior research context; not fresh per-case sessions.",
+    "No audio, production or independent CLI installation tests.",
+    "Scores are subjective ordinal editorial judgments.",
+    "Case32 input is syntactically ambiguous; review assumes editor-specific inability to restore.",
+    "Other tools were studied statically, not run as competing rewriting models."
+  ],
+  "preferences": {
+    "tie": 33,
+    "baseline": 5,
+    "updated": 2
+  },
+  "candidate_source_hashes": {
+    "SKILL.md": "dfee219d20b197d21b49fc8efc53ab6e5c06fce9bd267eb6d652e2a7ddcf45df",
+    "references/calques.md": "d60cb8c8655fa8cd7064df0b4e56a2f7e787b6dd257a74022e1641dd8185b451",
+    "references/dialogue.md": "29c43bdeb9bf2394e76368055264572ca5fa588a4fa103d7a78006d186790a3f",
+    "references/editorial-review.md": "f2fa13ed3792f73dbd94d7d816f30ff2dd0678e7d241851674359e8fe7b49536",
+    "references/explanation.md": "3977b16cdc50770c6d63086570586a76c266f8aeef7b94d04a6724dd44ea2790",
+    "references/integration.md": "7f6011ad54a5870c58bc1e68380b53f605877e8a8fdce931c0eea0ebf1a8f395",
+    "references/landing-copy.md": "4939130c7c67c5b9b05b17f829a4a23bfd6e1eb605c5b3f5ebb64adb8bb85a6c",
+    "references/prompt-integration.md": "97ec9358d602860412e67c59e70e02375c4a624b05089a28bbeaa5e8651a13f3",
+    "references/prose.md": "8bebc4bd76e34b4145d7de5fd51ddd2bba0a19c2da993ce5445729291ef40e3e",
+    "references/quality.md": "020d5041515ee9a49fc9f4cc9df841dc3a3dd04f1ebd257c50bcbd482d4d92cf",
+    "references/registers.md": "20585bf7166ffa68044f12bbdcdd72a74fbb0891c1517232ca36fca67a088acb",
+    "references/research.md": "84e8d0985e7fd097d1600389c3f36e793db33a2873f3c8f09d579160554f9758",
+    "references/script-contract.md": "b5378d197a33e7aadfbb37a85fe2078e70331b0b13e820ac85c303dc194e0e11",
+    "references/short-video-script.md": "81bbd7115924052e50727734f6be2eb746e933ce6665436f4ed4bd5a06a2e17e",
+    "references/social-posts.md": "93040858caf12c25e3f55497c0ab4dc3be2e9f48c263369eb5235eaa6fde1f8b",
+    "references/sources.md": "8021e95db34bf922ccefe3872a27c213eb2fdb7dad714874e6bd2afcbfc0cd11",
+    "references/spoken-russian.md": "c6415c658ca5eab349c43b3db4a79b426be53fc9a0983742f8272da2455cf3f2",
+    "references/storytelling.md": "55a4aae784c6ef3b6ab40b4583450735ef29bcbf227d90d05f4885b8852d4063",
+    "references/voice.md": "5c83ef923fbbf00d5e30f0097b26a92f6f05721dfac4035d2f2546f39010eb64",
+    "references/web-articles.md": "d2490155afaa6999415935f88111cd3a3d5123b2371312ea4547e49ff2f394e5",
+    "references/web-ui.md": "d4cdf7ce78379c7b86c97d31e67d569ac6740ff48eb05f22d002c1ede4d2ada3",
+    "references/website-copy.md": "0705a852729bb900c6fe8e9321649e05820a2fd7684a0f39954294add603dbd6"
+  },
+  "records": [
+    {
+      "id": "fragment-01",
+      "baseline": "Не трогай трос. Сначала проверим крепление.",
+      "candidate": "Не трогай трос. Сначала проверим крепление.",
+      "blind_assignment": {
+        "left": "updated",
+        "right": "baseline"
+      },
+      "review": {
+        "id": "fragment-01",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Ответы совпадают: сохранены запрет и порядок проверки; исходная реплика не требует вмешательства."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-02",
+      "baseline": "Сначала откройте папку. Найдите файл «Смета» и сохраните копию.",
+      "candidate": "Сначала откройте папку. Найдите файл «Смета» и сохраните копию.",
+      "blind_assignment": {
+        "left": "baseline",
+        "right": "updated"
+      },
+      "review": {
+        "id": "fragment-02",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Ответы совпадают: короткие понятные инструкции и порядок действий сохранены; произнесение без записи не оценивается."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-03",
+      "baseline": "Перед отправкой сметы проверьте итоговую сумму. Одна пропущенная строка меняет расчёт.",
+      "candidate": "Перед отправкой сметы проверьте итоговую сумму. Одна пропущенная строка меняет расчёт.",
+      "blind_assignment": {
+        "left": "updated",
+        "right": "baseline"
+      },
+      "review": {
+        "id": "fragment-03",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Ответы совпадают: проверка суммы и объяснение сохранены, лишних обещаний и призыва нет."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-04",
+      "baseline": "Она положила ключ на подоконник и ушла. Я ещё долго смотрел на дверь.",
+      "candidate": "Она положила ключ на подоконник и ушла. Я ещё долго смотрел на дверь.",
+      "blind_assignment": {
+        "left": "updated",
+        "right": "baseline"
+      },
+      "review": {
+        "id": "fragment-04",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Ответы совпадают: события, первое лицо и сдержанный ритм сохранены."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-05",
+      "baseline": "Копия сохраняет исходный файл. Если правка окажется неудачной, можно вернуться к нему.",
+      "candidate": "Копия сохраняет исходный файл. Если правка окажется неудачной, можно вернуться к нему.",
+      "blind_assignment": {
+        "left": "baseline",
+        "right": "updated"
+      },
+      "review": {
+        "id": "fragment-05",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Ответы совпадают: связь копии и возможности вернуться к исходнику сохранена без обещания автоматизации."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-06",
+      "baseline": "Объективной ошибки нет. Фраза ясная и грамматически правильная.",
+      "candidate": "Объективных языковых ошибок нет.",
+      "blind_assignment": {
+        "left": "updated",
+        "right": "baseline"
+      },
+      "review": {
+        "id": "fragment-06",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Оба ответа верно диагностируют корректную фразу и не переписывают её; дополнительное пояснение справа допустимо."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-07",
+      "baseline": "Переставила стол к окну. Теперь отвлекаюсь на голубей, а не на стену.",
+      "candidate": "Переставила стол к окну. Теперь отвлекаюсь на голубей, а не на стену.",
+      "blind_assignment": {
+        "left": "baseline",
+        "right": "updated"
+      },
+      "review": {
+        "id": "fragment-07",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Ответы совпадают: наблюдение и ирония исходника сохранены без морали."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-08",
+      "baseline": "Я трижды переписала начало письма. Потом позвонила. Разговор занял две минуты.",
+      "candidate": "Я трижды переписала начало письма. Потом позвонила. Разговор занял две минуты.",
+      "blind_assignment": {
+        "left": "updated",
+        "right": "baseline"
+      },
+      "review": {
+        "id": "fragment-08",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Ответы совпадают: порядок событий и две минуты сохранены; мотив звонка не выдуман."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-09",
+      "baseline": "Перед заменой файла сохраните копию. Дальше разберём, как проверить новую версию.",
+      "candidate": "Перед заменой файла сохраните копию. Дальше разберём, как проверить новую версию.",
+      "blind_assignment": {
+        "left": "updated",
+        "right": "baseline"
+      },
+      "review": {
+        "id": "fragment-09",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Ответы совпадают: полезное предварительное действие и переход к руководству сохранены."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-10",
+      "baseline": "Починим книгу, с которой не хочется расставаться. На осмотре предложим, что можно восстановить.",
+      "candidate": "Починим книгу, с которой не хочется расставаться. На осмотре предложим, что можно восстановить.",
+      "blind_assignment": {
+        "left": "baseline",
+        "right": "updated"
+      },
+      "review": {
+        "id": "fragment-10",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 2,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 2,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 2,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 2,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Ответы совпадают: осмотр остаётся этапом оценки возможностей ремонта; масштаб обещания не увеличен."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-11",
+      "baseline": "Услуги: «Запишитесь на осмотр книги».\nКонтакты: «На осмотр можно записаться по телефону».",
+      "candidate": "Услуги: «Запишитесь на осмотр книги».\nКонтакты: «На осмотр можно записаться по телефону».",
+      "blind_assignment": {
+        "left": "updated",
+        "right": "baseline"
+      },
+      "review": {
+        "id": "fragment-11",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Ответы совпадают: повтор полезен для разных блоков, услуга и телефонный канал сохранены."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-12",
+      "baseline": "Не удалось сохранить изменения. Попробуйте ещё раз.",
+      "candidate": "Не удалось сохранить изменения. Попробуйте ещё раз.",
+      "blind_assignment": {
+        "left": "baseline",
+        "right": "updated"
+      },
+      "review": {
+        "id": "fragment-12",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Ответы совпадают: сообщено только известное состояние и предложена повторная попытка."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-13",
+      "baseline": "Марина, пришли, пожалуйста, смету до пятницы.",
+      "candidate": "Марина, пришли, пожалуйста, смету до пятницы.",
+      "blind_assignment": {
+        "left": "updated",
+        "right": "baseline"
+      },
+      "review": {
+        "id": "fragment-13",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Ответы совпадают: просьба, обращение на ты и срок сохранены без усиления нажима."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-14",
+      "baseline": "Не знаю, смогу ли я с этим смириться.",
+      "candidate": "Не уверен, что смогу с этим смириться.",
+      "blind_assignment": {
+        "left": "baseline",
+        "right": "updated"
+      },
+      "review": {
+        "id": "fragment-14",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Обе реплики естественны, сохраняют сомнение и предел принятия. Разница между «не знаю» и «не уверен» здесь не даёт уверенного предпочтения."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-15",
+      "baseline": "Лида: Дашь мне свой ключ?\nОрлов: А твой где?\nЛида: Сейчас не под рукой.",
+      "candidate": "Лида: Дашь свой ключ?\nОрлов: А твой?\nЛида: Своим я сейчас не могу воспользоваться.",
+      "blind_assignment": {
+        "left": "baseline",
+        "right": "updated"
+      },
+      "review": {
+        "id": "fragment-15",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 2,
+            "sense": 3,
+            "genre": 2,
+            "lexical": 2,
+            "expression": 2,
+            "rhythm": 2,
+            "voice": 2,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "left",
+        "reason": "Слева диалог звучит живее: «А твой где?» и «не под рукой» сохраняют уклончивость. Справа последняя реплика заметно официальнее, хотя факты не нарушены."
+      },
+      "preferred_version": "baseline"
+    },
+    {
+      "id": "fragment-16",
+      "baseline": "В целях обеспечения соблюдения пропускного режима вам надлежит предъявить документ.\n\nОставил без изменений: казённый оборот здесь передаёт голос инспектора, явной переводной конструкции нет.",
+      "candidate": "В целях обеспечения соблюдения пропускного режима вам надлежит предъявить документ.\n\nФраза уже соответствует нарочито канцелярскому голосу инспектора. Оснований считать её буквальным переводом нет.",
+      "blind_assignment": {
+        "left": "updated",
+        "right": "baseline"
+      },
+      "review": {
+        "id": "fragment-16",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Оба ответа обоснованно сохраняют намеренный канцелярский голос и отделяют его от переводной ошибки; пояснения равноправны."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-17",
+      "baseline": "Упаковка весит три с половиной килограмма. Поднимайте её двумя руками.",
+      "candidate": "Упаковка весит три с половиной килограмма. Поднимайте её двумя руками.",
+      "blind_assignment": {
+        "left": "baseline",
+        "right": "updated"
+      },
+      "review": {
+        "id": "fragment-17",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Ответы совпадают: величина раскрыта точно, требование поднимать двумя руками сохранено."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-18",
+      "baseline": "Что нужно сохранить — папку или заявку?\n\nЕсли заявку: «Откройте папку с заявкой и сохраните заявку».\nЕсли папку: «Откройте папку с заявкой и сохраните эту папку».",
+      "candidate": "Что нужно сохранить: папку или заявку? На слух «её» может относиться к обеим.",
+      "blind_assignment": {
+        "left": "baseline",
+        "right": "updated"
+      },
+      "review": {
+        "id": "fragment-18",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Оба ответа сохраняют неопределённость объекта. Вопроса справа достаточно; условные варианты слева тоже прямо разрешены контекстом."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-19",
+      "baseline": "В пять секунд не уложится: здесь 17 слов, при темпе 120 слов в минуту потребуется около 8,5 секунды без пауз. Все действия обязательны, поэтому для исходной формулировки нужно увеличить время как минимум до 8,5 секунды и отдельно учесть паузы.",
+      "candidate": "В исходнике 17 слов. При темпе 120 слов в минуту это 8,5 секунды без пауз. В пять секунд такая речь не уложится: в них помещается около десяти слов. Поскольку все действия обязательны, нужно увеличить время или изменить способ их подачи; одного ускорения текста недостаточно.",
+      "blind_assignment": {
+        "left": "baseline",
+        "right": "updated"
+      },
+      "review": {
+        "id": "fragment-19",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 2,
+            "expression": 2,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 2
+          }
+        },
+        "preferred": "left",
+        "reason": "Оба ответа верно считают 17 слов и 8,5 секунды без пауз. Слева яснее разграничены расчёт и необходимость добавить паузы; фраза справа про «ускорение текста» менее точна."
+      },
+      "preferred_version": "baseline"
+    },
+    {
+      "id": "fragment-20",
+      "baseline": "Хук: Почему смета расходится с итогом?\nОснова: Проверьте, включена ли доставка.\nФинал: Сохраните памятку по ссылке в описании.",
+      "candidate": "Хук: Почему смета расходится с итогом?\nОснова: Проверьте, включена ли доставка.\nФинал: Сохраните памятку по ссылке в описании.",
+      "blind_assignment": {
+        "left": "updated",
+        "right": "baseline"
+      },
+      "review": {
+        "id": "fragment-20",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Ответы совпадают: проверка доставки остаётся вопросом, хук и призыв сохранить памятку сохранены."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-21",
+      "baseline": "В этом сервисе можно составить расписание и отправить участникам ссылку.",
+      "candidate": "Составьте расписание в сервисе и отправьте участникам ссылку на него.",
+      "blind_assignment": {
+        "left": "baseline",
+        "right": "updated"
+      },
+      "review": {
+        "id": "fragment-21",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 2,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 2,
+            "spoken": null,
+            "restraint": 2
+          }
+        },
+        "preferred": "left",
+        "reason": "Слева естественная короткая речь о возможностях сервиса. Справа императив допустим как инструкция, но слегка смещает сообщение к побуждению при отсутствии нужды в CTA."
+      },
+      "preferred_version": "baseline"
+    },
+    {
+      "id": "fragment-22",
+      "baseline": "Стоп, не отправляйте эту смету! Сначала проверьте итоговую сумму.",
+      "candidate": "Стоп, не отправляйте эту смету! Сначала проверьте итоговую сумму.",
+      "blind_assignment": {
+        "left": "updated",
+        "right": "baseline"
+      },
+      "review": {
+        "id": "fragment-22",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Ответы совпадают: канцелярит убран точечно, энергия предупреждения сохранена."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-23",
+      "baseline": "Он посмотрел на Анну и подумал: может быть, она скрывает письмо.",
+      "candidate": "Он посмотрел на Анну и подумал, что она, возможно, скрывает письмо.",
+      "blind_assignment": {
+        "left": "baseline",
+        "right": "updated"
+      },
+      "review": {
+        "id": "fragment-23",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Обе версии сохраняют ограниченную перспективу и вероятность. Слева переход к мысли чуть непосредственнее, справа исходная фраза тоже ясна; достаточных оснований выбрать одну нет."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-24",
+      "baseline": "Тишина навалилась на него тяжёлым камнем.",
+      "candidate": "Тишина навалилась на него тяжёлым камнем.",
+      "blind_assignment": {
+        "left": "updated",
+        "right": "baseline"
+      },
+      "review": {
+        "id": "fragment-24",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Ответы совпадают: остался один согласованный образ давления тишины без новых событий."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-25",
+      "baseline": "Сравните перечень работ и итоговую сумму в двух версиях сметы.",
+      "candidate": "Сравните перечень работ и итоговую сумму в двух версиях сметы.",
+      "blind_assignment": {
+        "left": "baseline",
+        "right": "updated"
+      },
+      "review": {
+        "id": "fragment-25",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Ответы совпадают: указаны ровно два заданных критерия сравнения без выдуманных данных."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-26",
+      "baseline": "Выносливость восстанавливается, когда вы не двигаетесь.",
+      "candidate": "Выносливость восстанавливается, если не двигаться.",
+      "blind_assignment": {
+        "left": "updated",
+        "right": "baseline"
+      },
+      "review": {
+        "id": "fragment-26",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Обе версии ясны и сохраняют восстановление при неподвижности. Разница между безличным условием и обращением к читателю допустима."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-27",
+      "baseline": "Ошибка: «согласно договора» — предлог «согласно» требует дательного падежа: «согласно договору».\n\n«Осуществляем доставку» — допустимый, но тяжеловесный оборот. Выбрать более простой глагол можно ради тона; грамматической ошибкой этот оборот не является.",
+      "candidate": "Ошибка: «согласно договора». Предлог «согласно» требует дательного падежа: «согласно договору».\n\nСтилистический вариант: «осуществляем доставку» можно заменить на «доставляем». Исходный оборот грамматически верен; замена делает фразу проще, но для формального регистра не обязательна.",
+      "blind_assignment": {
+        "left": "baseline",
+        "right": "updated"
+      },
+      "review": {
+        "id": "fragment-27",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 2,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "right",
+        "reason": "Оба ответа верно находят падежную ошибку и не объявляют канцелярский оборот запретным. Справа чуть конкретнее объяснена зависимость стилистической замены от регистра."
+      },
+      "preferred_version": "updated"
+    },
+    {
+      "id": "fragment-28",
+      "baseline": "Сегодня переставила стол к окну. На подоконник сел голубь. Видимо, пришёл оценить перестановку.",
+      "candidate": "Сегодня переставила стол к окну. На подоконник сел голубь.",
+      "blind_assignment": {
+        "left": "updated",
+        "right": "baseline"
+      },
+      "review": {
+        "id": "fragment-28",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 2,
+            "rhythm": 3,
+            "voice": 2,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 2
+          }
+        },
+        "preferred": "right",
+        "reason": "Справа появляется короткая ироническая концовка, подходящая авторскому посту. «Видимо» маркирует фантазийную трактовку поведения голубя, а не новый достоверный факт; строгая трактовка ограничения могла бы предпочесть левую версию."
+      },
+      "preferred_version": "baseline"
+    },
+    {
+      "id": "fragment-29",
+      "baseline": "Снова откладываю публикацию поста. Новые горизонты открываются, пост — нет.",
+      "candidate": "Снова откладываю публикацию поста. Новые горизонты открываются, пост — нет.",
+      "blind_assignment": {
+        "left": "baseline",
+        "right": "updated"
+      },
+      "review": {
+        "id": "fragment-29",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Ответы совпадают: шаблонные слова превращены в ироническое противопоставление без выдуманных мотивов."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-30",
+      "baseline": "Трижды переписала начало письма. Потом позвонила. Разговор занял две минуты.",
+      "candidate": "Трижды переписала начало письма. Потом позвонила. Разговор занял две минуты.",
+      "blind_assignment": {
+        "left": "baseline",
+        "right": "updated"
+      },
+      "review": {
+        "id": "fragment-30",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Ответы совпадают: добавленная связь «потом» собирает события в короткую историю, факты и порядок сохранены."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-31",
+      "baseline": "После запуска сайта поступили две заявки. Мы пока не знаем, связаны ли они с обновлением.",
+      "candidate": "После запуска сайта поступили две заявки. Мы пока не знаем, связаны ли они с обновлением.",
+      "blind_assignment": {
+        "left": "updated",
+        "right": "baseline"
+      },
+      "review": {
+        "id": "fragment-31",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Ответы совпадают: две заявки сохранены, причинная связь с обновлением не приписана."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-32",
+      "baseline": "Перед правкой сохраните копию исходного файла. Вернуть предыдущую версию средствами программы нельзя.",
+      "candidate": "Как сохранить исходный файл перед правкой\n\nСначала сделайте копию файла. Без неё вернуться к предыдущей версии не получится.",
+      "blind_assignment": {
+        "left": "baseline",
+        "right": "updated"
+      },
+      "review": {
+        "id": "fragment-32",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [
+            "Ограничение возможности восстановления средствами программы расширено до безусловного «вернуться к предыдущей версии не получится»; это более сильное утверждение, чем дано."
+          ],
+          "scores": {
+            "naturalness": 3,
+            "sense": 1,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 1
+          }
+        },
+        "preferred": "left",
+        "reason": "Слева сохранён предел исходного утверждения: вернуть версию нельзя средствами программы. Справа утверждение «вернуться ... не получится» стало общим и исключает неизвестные другие способы восстановления."
+      },
+      "preferred_version": "baseline"
+    },
+    {
+      "id": "fragment-33",
+      "baseline": "После смены упаковки продажи выросли на 8%. Другие факторы не оценивались.",
+      "candidate": "После смены упаковки продажи выросли на 8%. Другие факторы не оценивались.",
+      "blind_assignment": {
+        "left": "updated",
+        "right": "baseline"
+      },
+      "review": {
+        "id": "fragment-33",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Ответы совпадают: рост на 8% следует за сменой упаковки, причинность не утверждается и предел анализа сохранён."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-34",
+      "baseline": "Ремонт книг\n\nНа осмотре мастер оценит состояние книги и предложит ремонт.",
+      "candidate": "Ремонт книг\n\nМастер осмотрит книгу, оценит её состояние и предложит ремонт.",
+      "blind_assignment": {
+        "left": "baseline",
+        "right": "updated"
+      },
+      "review": {
+        "id": "fragment-34",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Обе версии дают понятное предложение ремонта и сохраняют обязательность осмотра. Небольшая разница в синтаксисе несущественна."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-35",
+      "baseline": "Составляйте расписание и делитесь ссылкой с участниками.",
+      "candidate": "Составляйте расписание и делитесь ссылкой с участниками.",
+      "blind_assignment": {
+        "left": "updated",
+        "right": "baseline"
+      },
+      "review": {
+        "id": "fragment-35",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Ответы совпадают: названы две реальные возможности без рекламного преувеличения."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-36",
+      "baseline": "Сроки ответа расходятся: на главной — в течение дня, в контактах — в течение трёх рабочих дней. Нужно уточнить действующий срок и одинаково указать его в обоих блоках. По этим данным выбрать верный вариант нельзя.",
+      "candidate": "Сроки противоречат друг другу: на главной обещан ответ «в течение дня», на странице контактов — «в течение трёх рабочих дней». Нужно уточнить фактический срок и привести оба блока к нему. До уточнения выбирать одну из версий нельзя.",
+      "blind_assignment": {
+        "left": "updated",
+        "right": "baseline"
+      },
+      "review": {
+        "id": "fragment-36",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Оба ответа правильно замечают расхождение сроков, требуют уточнения и не выбирают неизвестное условие; стилистическая разница несущественна."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-37",
+      "baseline": "1. Главная: мастерская ремонтирует книги; перед ремонтом нужен осмотр.\n2. Осмотр: этот этап предшествует ремонту.\n3. Запись и контакты: запись по телефону; указать номер, когда он будет предоставлен.",
+      "candidate": "Главная: мастерская ремонтирует книги; ремонт начинается после осмотра.\nОсмотр и ремонт: объяснить, что перед ремонтом книгу нужно показать мастеру.\nКонтакты: телефон и предложение записаться на осмотр.\n\nДля короткого сайта это могут быть три блока одной страницы. Номер телефона нужно взять из данных мастерской.",
+      "blind_assignment": {
+        "left": "updated",
+        "right": "baseline"
+      },
+      "review": {
+        "id": "fragment-37",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 2,
+            "lexical": 3,
+            "expression": 2,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 2
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 1,
+            "lexical": 3,
+            "expression": 2,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "left",
+        "reason": "Слева блок «Осмотр и ремонт» ближе к задаче страницы услуги. Справа пункт об осмотре почти повторяет главную и слабее разводит задачи блоков; новых фактов оба ответа не добавляют."
+      },
+      "preferred_version": "updated"
+    },
+    {
+      "id": "fragment-38",
+      "baseline": "Запросить расчёт",
+      "candidate": "Запросить расчёт",
+      "blind_assignment": {
+        "left": "baseline",
+        "right": "updated"
+      },
+      "review": {
+        "id": "fragment-38",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Ответы совпадают: кнопка точно обозначает запрос расчёта и не обещает мгновенную цену."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-39",
+      "baseline": "Спасибо, что нашла время посмотреть мою смету. Можешь отправить замечания до четверга?",
+      "candidate": "Спасибо, что нашла время посмотреть мою смету. Можешь отправить замечания до четверга?",
+      "blind_assignment": {
+        "left": "updated",
+        "right": "baseline"
+      },
+      "review": {
+        "id": "fragment-39",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Ответы совпадают: переводная конструкция заменена естественной благодарностью, просьба и четверг сохранены."
+      },
+      "preferred_version": "tie"
+    },
+    {
+      "id": "fragment-40",
+      "baseline": "Ошибок не вижу. Фраза ясная, правка не нужна.",
+      "candidate": "Ошибок нет. Фраза ясная, правка не нужна.",
+      "blind_assignment": {
+        "left": "baseline",
+        "right": "updated"
+      },
+      "review": {
+        "id": "fragment-40",
+        "left": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "right": {
+          "violations": [],
+          "scores": {
+            "naturalness": 3,
+            "sense": 3,
+            "genre": 3,
+            "lexical": 3,
+            "expression": 3,
+            "rhythm": 3,
+            "voice": 3,
+            "spoken": null,
+            "restraint": 3
+          }
+        },
+        "preferred": "tie",
+        "reason": "Оба ответа корректно признают буквальное время допустимым и не меняют текст. Разная степень категоричности диагноза здесь несущественна."
+      },
+      "preferred_version": "tie"
+    }
+  ]
+}

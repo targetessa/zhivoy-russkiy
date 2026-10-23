@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-23",
+  "phase": "after scoped-claim correction",
+  "answers": [
+    {
+      "id": 1,
+      "output": "В этом редакторе нет функции возврата к сохранённой версии. Перед изменениями создайте резервную копию.",
+      "refs_read": [
+        "outputs/zhivoy-russkiy/SKILL.md",
+        "outputs/zhivoy-russkiy/references/explanation.md"
+      ]
+    },
+    {
+      "id": 2,
+      "output": "В сервисе заметки собраны в папки. А чтобы найти нужную заметку, здесь есть поиск по заголовку.",
+      "refs_read": [
+        "outputs/zhivoy-russkiy/SKILL.md",
+        "outputs/zhivoy-russkiy/references/spoken-russian.md"
+      ]
+    },
+    {
+      "id": 3,
+      "output": "«Согласно договора» — ошибка управления: предлог «согласно» требует дательного падежа, поэтому правильно «согласно договору». Деловой регистр уместен; менять его не требуется.",
+      "refs_read": [
+        "outputs/zhivoy-russkiy/SKILL.md",
+        "outputs/zhivoy-russkiy/references/editorial-review.md"
+      ]
+    },
+    {
+      "id": 4,
+      "output": "Ей показалось, что свет в окне погас. Она остановилась.",
+      "refs_read": [
+        "outputs/zhivoy-russkiy/SKILL.md",
+        "outputs/zhivoy-russkiy/references/prose.md"
+      ]
+    },
+    {
+      "id": 5,
+      "output": "Перенесла рабочий стол к окну. На подоконник прилетел воробей. Кажется, теперь у меня есть проверяющий.",
+      "refs_read": [
+        "outputs/zhivoy-russkiy/SKILL.md",
+        "outputs/zhivoy-russkiy/references/social-posts.md"
+      ]
+    }
+  ],
+  "video": {
+    "duration_seconds": 35,
+    "tone": "спокойный эксперт",
+    "cta": "сохранить памятку",
+    "blocks": [
+      {
+        "id": "opening",
+        "role": "hook",
+        "start": 0,
+        "end": 9,
+        "speech": "Смету перед отправкой можно проверить простым способом.",
+        "visual": "Смета на экране"
+      },
+      {
+        "id": "middle",
+        "role": "development",
+        "start": 9,
+        "end": 26,
+        "speech": "Сначала сверьте перечень работ и итоговую сумму с согласованным заданием. Такая проверка не гарантирует, что вы найдёте все ошибки.",
+        "caption": "Работы и сумма"
+      },
+      {
+        "id": "ending",
+        "role": "cta",
+        "start": 26,
+        "end": 35,
+        "speech": "Сохраните памятку: {checklist}. Ссылка останется в описании.",
+        "visual": "Карточка памятки"
+      }
+    ]
+  },
+  "technical_compare": {
+    "ok": true,
+    "errors": []
+  },
+  "limits": "Six targeted tasks, not a repeated forty-case comparison. No audio or deployment."
+}

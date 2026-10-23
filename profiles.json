@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "profiles": {
+    "natural-dialogue": [
+      "dialogue.md"
+    ],
+    "spoken-russian": [
+      "spoken-russian.md"
+    ],
+    "short-video-script": [
+      "spoken-russian.md",
+      "short-video-script.md"
+    ],
+    "literary-prose": [
+      "prose.md"
+    ],
+    "explanatory-russian": [
+      "explanation.md"
+    ],
+    "editorial-review": [
+      "editorial-review.md"
+    ],
+    "social-posts": [
+      "social-posts.md"
+    ],
+    "storytelling": [
+      "storytelling.md"
+    ],
+    "web-articles": [
+      "web-articles.md"
+    ],
+    "landing-copy": [
+      "landing-copy.md"
+    ],
+    "website-copy": [
+      "website-copy.md"
+    ],
+    "web-ui": [
+      "web-ui.md"
+    ],
+    "letters": [
+      "registers.md"
+    ]
+  }
+}
