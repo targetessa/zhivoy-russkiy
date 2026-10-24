@@ -88,6 +88,16 @@ class ProfileAndVideoTests(unittest.TestCase):
         self.assertNotIn('## Выбор профиля',text)
         with self.assertRaises(ValueError): build_prompt.compile_prompt('../../secret')
 
+    def test_book_informed_export_is_explicit_and_composable(self):
+        _, ordinary = build_prompt.compile_prompt('web-ui')
+        self.assertNotIn('references/book-informed-writing.md', ordinary)
+        text, selected = build_prompt.compile_prompt('short-video-script', 'voice', extended=True, book_informed=True)
+        self.assertEqual(selected.count('references/voice.md'), 1)
+        self.assertEqual(selected.count('references/book-informed-writing.md'), 1)
+        self.assertIn('references/syntax-and-composition.md', selected)
+        self.assertNotIn('references/landing-copy.md', selected)
+        self.assertIn('Книжная речь: как развивается мысль', text)
+
     def test_diagnosis_and_all_routes(self):
         text,_ = build_prompt.compile_prompt('editorial-review','diagnose')
         self.assertIn('не переписывай материал',text)
