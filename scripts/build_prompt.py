@@ -21,7 +21,7 @@ def profiles():
     return json.loads((ROOT / "profiles.json").read_text(encoding="utf-8"))["profiles"]
 
 
-def compile_prompt(profile, operation="edit", extended=False):
+def compile_prompt(profile, operation="edit", extended=False, book_informed=False):
     routes = profiles()
     if profile not in routes or operation not in OPERATIONS:
         raise ValueError("Неизвестный профиль или действие")
@@ -33,6 +33,10 @@ def compile_prompt(profile, operation="edit", extended=False):
         documents.append("references/voice.md")
     if extended:
         documents.append("references/syntax-and-composition.md")
+    if book_informed:
+        for name in ("references/voice.md", "references/book-informed-writing.md"):
+            if name not in documents:
+                documents.append(name)
     parts = [core]
     for name in documents[1:]:
         source = (ROOT / name).resolve()
@@ -55,9 +59,10 @@ def main(argv=None):
     parser.add_argument("--output", type=Path)
     parser.add_argument("--stats", action="store_true", help="Only counts and selected files; no token estimate")
     parser.add_argument("--extended", action="store_true", help="Include sentence and paragraph composition for extended work")
+    parser.add_argument("--book-informed", action="store_true", help="Include reference matching and book-informed composition; source books are not embedded")
     args = parser.parse_args(argv)
     try:
-        prompt, documents = compile_prompt(args.profile, args.operation, args.extended)
+        prompt, documents = compile_prompt(args.profile, args.operation, args.extended, args.book_informed)
         if args.stats:
             print(json.dumps({"profile": args.profile, "documents": documents,
                               "characters": len(prompt), "utf8_bytes": len(prompt.encode("utf-8"))}, ensure_ascii=False))

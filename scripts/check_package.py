@@ -27,6 +27,7 @@ def check():
         compile_prompt(profile)
         compile_prompt(profile, 'voice')
         compile_prompt(profile, extended=True)
+        compile_prompt(profile, book_informed=True)
     fragments = read_json(ROOT / 'evals/fragments.json')['cases']
     ids = [case['id'] for case in fragments]
     if len(ids) < 30 or len(ids) != len(set(ids)):
@@ -47,10 +48,17 @@ def check():
         if (case.get('profile') not in profiles() or case.get('operation') not in OPERATIONS
                 or not all(case.get(key) for key in ['request', 'source', 'semantic_invariants'])):
             errors.append(f"Invalid extended case: {case.get('id')}")
+    book_cases = read_json(ROOT / 'evals/book-informed.json')['cases']
+    if not book_cases or len({case['id'] for case in book_cases}) != len(book_cases):
+        errors.append('Missing or duplicate book-informed cases')
+    for case in book_cases:
+        if not case.get('request') or not isinstance(case.get('checks'), list) or not case['checks']:
+            errors.append(f"Invalid book-informed case: {case.get('id')}")
     errors += compare(read_json(ROOT/'examples/scene.before.json'),read_json(ROOT/'examples/scene.after.json'))
     errors += compare_video(read_json(ROOT/'examples/video.before.json'),read_json(ROOT/'examples/video.after.json'))
     return {'ok': not errors, 'profiles':len(profiles()),'fragments':len(fragments),
-            'regression_cases':len(regressions),'extended_cases':len(extended),'errors':errors}
+            'regression_cases':len(regressions),'extended_cases':len(extended),
+            'book_informed_cases':len(book_cases),'errors':errors}
 
 
 if __name__ == '__main__':
