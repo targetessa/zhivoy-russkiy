@@ -82,7 +82,7 @@ class ProfileAndVideoTests(unittest.TestCase):
 
     def test_selected_prompt_does_not_load_other_profiles(self):
         text, sources = build_prompt.compile_prompt('short-video-script')
-        self.assertEqual(sources,['SKILL.md','references/spoken-russian.md','references/short-video-script.md'])
+        self.assertEqual(sources,['SKILL.md','references/spoken-russian.md','references/short-video-script.md','references/translationese.md'])
         self.assertNotIn('# Художественная редактура',text)
         self.assertNotIn('references/',text)
         self.assertNotIn('## Выбор профиля',text)
@@ -104,8 +104,16 @@ class ProfileAndVideoTests(unittest.TestCase):
         for profile in build_prompt.profiles():
             prompt, sources = build_prompt.compile_prompt(profile)
             self.assertTrue(prompt)
-            self.assertLessEqual(len(sources),3)
+            self.assertLessEqual(len(sources),4)
+            # The translationese check is core: every profile gets it exactly once.
+            self.assertEqual(sources.count('references/translationese.md'),1)
+            self.assertIn('Нерусские конструкции',prompt)
         with self.assertRaises(ValueError): build_prompt.compile_prompt('spoken-russian','delete')
+
+    def test_edit_operation_does_not_spare_grammatical_calques(self):
+        text,_ = build_prompt.compile_prompt('short-video-script','edit')
+        self.assertIn('переводные и канцелярские конструкции исправляй всегда',text)
+        self.assertIn('понятный следующий шаг',text)
 
     def test_voice_operation_loads_voice_card(self):
         text, sources = build_prompt.compile_prompt('spoken-russian','voice')
