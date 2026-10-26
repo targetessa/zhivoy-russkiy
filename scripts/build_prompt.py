@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OPERATIONS = {
     "create": "Создай готовый текст по замыслу и подтверждённым фактам.",
     "diagnose": "Дай диагноз с основаниями; не переписывай материал и не меняй файлы.",
-    "edit": "Бережно отредактируй; хорошие места сохраняй.",
+    "edit": "Бережно отредактируй; хорошие места сохраняй, а переводные и канцелярские конструкции исправляй всегда, даже грамматически верные.",
     "deep-edit": "Перестрой текст в порученном объёме, сохрани замысел и инварианты.",
     "voice": "Настрой голос по предоставленным образцам, сохрани смысл.",
     "review": "Проверь результат; не переписывай его без необходимости.",
@@ -29,6 +29,9 @@ def compile_prompt(profile, operation="edit", extended=False, book_informed=Fals
     start, end = core.index("## Выбор профиля"), core.index("## Общее ядро")
     core = core[:start] + core[end:]
     documents = ["SKILL.md"] + ["references/" + name for name in routes[profile]]
+    # Every profile writes Russian sentences, so the translationese check is part of the core.
+    if "references/translationese.md" not in documents:
+        documents.append("references/translationese.md")
     if operation == "voice" and "references/voice.md" not in documents:
         documents.append("references/voice.md")
     if extended:
