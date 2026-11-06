@@ -40,6 +40,10 @@
     ],
     "letters": [
       "registers.md"
+    ],
+    "reels": [
+      "spoken-russian.md",
+      "reels.md"
     ]
   }
 }

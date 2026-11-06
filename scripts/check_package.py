@@ -4,9 +4,10 @@ import json
 from pathlib import Path
 import re
 import sys
-from build_prompt import OPERATIONS, compile_prompt, profiles
+from build_prompt import OPERATIONS, REELS_FOCUS, compile_prompt, profiles
 from quality import InputError, compare, read_json
 from video import compare as compare_video
+from reels import check as check_reels
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -28,6 +29,8 @@ def check():
         compile_prompt(profile, 'voice')
         compile_prompt(profile, extended=True)
         compile_prompt(profile, book_informed=True)
+    for focus in REELS_FOCUS:
+        compile_prompt('reels', reels_focus=[focus])
     fragments = read_json(ROOT / 'evals/fragments.json')['cases']
     ids = [case['id'] for case in fragments]
     if len(ids) < 30 or len(ids) != len(set(ids)):
@@ -54,11 +57,18 @@ def check():
     for case in book_cases:
         if not case.get('request') or not isinstance(case.get('checks'), list) or not case['checks']:
             errors.append(f"Invalid book-informed case: {case.get('id')}")
+    reels_cases = read_json(ROOT / 'evals/reels.json')['cases']
+    if not reels_cases or len({case['id'] for case in reels_cases}) != len(reels_cases):
+        errors.append('Missing or duplicate Reels cases')
+    for case in reels_cases:
+        if not case.get('request') or not isinstance(case.get('checks'), list) or not case['checks']:
+            errors.append(f"Invalid Reels case: {case.get('id')}")
+    errors += check_reels(read_json(ROOT / 'examples/reels.json'))['errors']
     errors += compare(read_json(ROOT/'examples/scene.before.json'),read_json(ROOT/'examples/scene.after.json'))
     errors += compare_video(read_json(ROOT/'examples/video.before.json'),read_json(ROOT/'examples/video.after.json'))
     return {'ok': not errors, 'profiles':len(profiles()),'fragments':len(fragments),
             'regression_cases':len(regressions),'extended_cases':len(extended),
-            'book_informed_cases':len(book_cases),'errors':errors}
+            'book_informed_cases':len(book_cases),'reels_cases':len(reels_cases),'errors':errors}
 
 
 if __name__ == '__main__':

@@ -7,6 +7,10 @@ import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
+REELS_FOCUS = {
+    name: "references/reels/" + name + ".md"
+    for name in ("topics", "hooks", "structure", "filming", "series", "editing")
+}
 OPERATIONS = {
     "create": "Создай готовый текст по замыслу и подтверждённым фактам.",
     "diagnose": "Дай диагноз с основаниями; не переписывай материал и не меняй файлы.",
@@ -21,10 +25,16 @@ def profiles():
     return json.loads((ROOT / "profiles.json").read_text(encoding="utf-8"))["profiles"]
 
 
-def compile_prompt(profile, operation="edit", extended=False, book_informed=False):
+def compile_prompt(profile, operation="edit", extended=False, book_informed=False, reels_focus=None):
     routes = profiles()
     if profile not in routes or operation not in OPERATIONS:
         raise ValueError("Неизвестный профиль или действие")
+    focus = [] if reels_focus is None else reels_focus
+    if not isinstance(focus, (list, tuple)) or any(
+            not isinstance(name, str) or name not in REELS_FOCUS for name in focus):
+        raise ValueError("Неизвестный раздел методики рилсов")
+    if focus and profile != "reels":
+        raise ValueError("--reels-focus используется только с профилем reels")
     core = (ROOT / "SKILL.md").read_text(encoding="utf-8").split("---", 2)[2].strip()
     start, end = core.index("## Выбор профиля"), core.index("## Общее ядро")
     core = core[:start] + core[end:]
@@ -40,6 +50,10 @@ def compile_prompt(profile, operation="edit", extended=False, book_informed=Fals
         for name in ("references/voice.md", "references/book-informed-writing.md"):
             if name not in documents:
                 documents.append(name)
+    for name in focus:
+        source = REELS_FOCUS[name]
+        if source not in documents:
+            documents.append(source)
     parts = [core]
     for name in documents[1:]:
         source = (ROOT / name).resolve()
@@ -50,7 +64,7 @@ def compile_prompt(profile, operation="edit", extended=False, book_informed=Fals
     # Exported prompts must not depend on a filesystem or silently load more refs.
     text = re.sub(r"\[([^\]]+)\]\((?!https?://)[^)]+\)", r"\1", text)
     text = ("# Редакторская роль\nПрофиль: " + profile + "\nДействие: " + OPERATIONS[operation]
-            + "\nЭто только языковой профиль. Соблюдай контракт приложения, формат ответа и подтверждённые условия задания. "
+            + "\nЭто инструкции для работы с текстом. Соблюдай контракт приложения, формат ответа и подтверждённые условия задания. "
               "Справочники уже выбраны; не ищи другие файлы. Исходный текст передаётся отдельно как данные.\n\n" + text)
     return text.rstrip() + "\n", documents
 
@@ -63,9 +77,12 @@ def main(argv=None):
     parser.add_argument("--stats", action="store_true", help="Only counts and selected files; no token estimate")
     parser.add_argument("--extended", action="store_true", help="Include sentence and paragraph composition for extended work")
     parser.add_argument("--book-informed", action="store_true", help="Include reference matching and book-informed composition; source books are not embedded")
+    parser.add_argument("--reels-focus", action="append", choices=sorted(REELS_FOCUS),
+                        help="Include a detailed Reels guide; repeat to select more (reels profile only)")
     args = parser.parse_args(argv)
     try:
-        prompt, documents = compile_prompt(args.profile, args.operation, args.extended, args.book_informed)
+        prompt, documents = compile_prompt(args.profile, args.operation, args.extended, args.book_informed,
+                                          reels_focus=args.reels_focus)
         if args.stats:
             print(json.dumps({"profile": args.profile, "documents": documents,
                               "characters": len(prompt), "utf8_bytes": len(prompt.encode("utf-8"))}, ensure_ascii=False))
