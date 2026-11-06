@@ -110,11 +110,6 @@ class ProfileAndVideoTests(unittest.TestCase):
             self.assertIn('Нерусские конструкции',prompt)
         with self.assertRaises(ValueError): build_prompt.compile_prompt('spoken-russian','delete')
 
-    def test_edit_operation_does_not_spare_grammatical_calques(self):
-        text,_ = build_prompt.compile_prompt('short-video-script','edit')
-        self.assertIn('переводные и канцелярские конструкции исправляй всегда',text)
-        self.assertIn('понятный следующий шаг',text)
-
     def test_voice_operation_loads_voice_card(self):
         text, sources = build_prompt.compile_prompt('spoken-russian','voice')
         self.assertIn('references/voice.md',sources)

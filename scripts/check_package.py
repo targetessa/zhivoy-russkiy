@@ -63,12 +63,20 @@ def check():
     for case in reels_cases:
         if not case.get('request') or not isinstance(case.get('checks'), list) or not case['checks']:
             errors.append(f"Invalid Reels case: {case.get('id')}")
+    judgment_cases = read_json(ROOT / 'evals/editorial-judgment.json')['cases']
+    if not judgment_cases or len({case['id'] for case in judgment_cases}) != len(judgment_cases):
+        errors.append('Missing or duplicate editorial-judgment cases')
+    for case in judgment_cases:
+        if (case.get('profile') not in profiles() or case.get('operation') not in OPERATIONS
+                or not all(case.get(key) for key in ['request', 'source', 'checks'])):
+            errors.append(f"Invalid editorial-judgment case: {case.get('id')}")
     errors += check_reels(read_json(ROOT / 'examples/reels.json'))['errors']
     errors += compare(read_json(ROOT/'examples/scene.before.json'),read_json(ROOT/'examples/scene.after.json'))
     errors += compare_video(read_json(ROOT/'examples/video.before.json'),read_json(ROOT/'examples/video.after.json'))
     return {'ok': not errors, 'profiles':len(profiles()),'fragments':len(fragments),
             'regression_cases':len(regressions),'extended_cases':len(extended),
-            'book_informed_cases':len(book_cases),'reels_cases':len(reels_cases),'errors':errors}
+            'book_informed_cases':len(book_cases),'reels_cases':len(reels_cases),
+            'editorial_judgment_cases':len(judgment_cases),'errors':errors}
 
 
 if __name__ == '__main__':
